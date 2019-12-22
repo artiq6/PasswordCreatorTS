@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro&display=swap');
+$Lato: 'Lato', sans-serif;   
+$SourceSansPro: 'Source Sans Pro', sans-serif;
+
+body {
+    font-family: $Lato;
+    font-weight: normal;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $SourceSansPro;
+    font-weight: normal;
+  }
