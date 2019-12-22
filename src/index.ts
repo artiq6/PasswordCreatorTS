@@ -1,2 +1,2 @@
-import './style.scss'
-window.alert("HELLO WORLD FROM WEB BUNDLER")
+import './style.scss';
+import './switch.scss'

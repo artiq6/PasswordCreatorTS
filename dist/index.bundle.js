@@ -93,7 +93,18 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro&display=swap);\"]);\n// Module\nexports.push([module.i, \"body {\\n  font-family: \\\"Lato\\\", sans-serif;\\n  font-weight: normal; }\\n\\nh1, h2, h3, h4, h5, h6 {\\n  font-family: \\\"Source Sans Pro\\\", sans-serif;\\n  font-weight: normal; }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/style.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro&display=swap);\"]);\n// Module\nexports.push([module.i, \"html, body {\\n  height: 100%; }\\n\\nbody {\\n  font-family: \\\"Lato\\\", sans-serif;\\n  color: white;\\n  background-color: #89BBF3;\\n  margin: 0;\\n  padding: 0;\\n  justify-content: center;\\n  align-items: center;\\n  display: flex; }\\n\\n.line {\\n  width: 90%;\\n  border: none;\\n  border-top: 2px solid #22354E; }\\n\\n.wrapper {\\n  height: 60vh;\\n  width: 60%;\\n  min-width: 300px;\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  background-color: #091F40;\\n  color: white;\\n  border-radius: 20px;\\n  -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);\\n  -moz-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);\\n  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); }\\n\\n#password {\\n  background-color: #22354E;\\n  border-radius: 20px;\\n  width: 90%;\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  justify-content: center; }\\n  #password h3 {\\n    margin-bottom: 0; }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/style.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/switch.scss":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/switch.scss ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro&display=swap);\"]);\n// Module\nexports.push([module.i, \"html, body {\\n  height: 100%; }\\n\\nbody {\\n  font-family: \\\"Lato\\\", sans-serif;\\n  color: white;\\n  background-color: #89BBF3;\\n  margin: 0;\\n  padding: 0;\\n  justify-content: center;\\n  align-items: center;\\n  display: flex; }\\n\\n.line {\\n  width: 90%;\\n  border: none;\\n  border-top: 2px solid #22354E; }\\n\\n.wrapper {\\n  height: 60vh;\\n  width: 60%;\\n  min-width: 300px;\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  background-color: #091F40;\\n  color: white;\\n  border-radius: 20px;\\n  -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);\\n  -moz-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);\\n  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); }\\n\\n#password {\\n  background-color: #22354E;\\n  border-radius: 20px;\\n  width: 90%;\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  justify-content: center; }\\n  #password h3 {\\n    margin-bottom: 0; }\\n\\n.switch {\\n  position: relative;\\n  display: inline-block;\\n  width: 60px;\\n  height: 34px; }\\n\\n.switch input {\\n  opacity: 0;\\n  width: 0;\\n  height: 0; }\\n\\n.slider {\\n  position: absolute;\\n  cursor: pointer;\\n  top: 0;\\n  left: 0;\\n  right: 0;\\n  bottom: 0;\\n  background-color: #22354E;\\n  -webkit-transition: .4s;\\n  transition: .4s; }\\n\\n.slider:before {\\n  position: absolute;\\n  content: \\\"\\\";\\n  height: 26px;\\n  width: 26px;\\n  left: 4px;\\n  bottom: 4px;\\n  background-color: white;\\n  -webkit-transition: .4s;\\n  transition: .4s; }\\n\\ninput:checked + .slider {\\n  background-color: #6B6AFF; }\\n\\ninput:focus + .slider {\\n  box-shadow: 0 0 1px #6B6AFF; }\\n\\ninput:checked + .slider:before {\\n  -webkit-transform: translateX(26px);\\n  -ms-transform: translateX(26px);\\n  transform: translateX(26px); }\\n\\n/* Rounded sliders */\\n.slider.round {\\n  border-radius: 34px; }\\n\\n.slider.round:before {\\n  border-radius: 50%; }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/switch.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -129,7 +140,7 @@ eval("\n\nvar stylesInDom = {};\n\nvar isOldIE = function isOldIE() {\n  var mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\nwindow.alert(\"HELLO WORLD FROM WEB BUNDLER\");\r\nvar img = new Image(200, 200);\r\ndocument.body.append(img);\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _switch_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./switch.scss */ \"./src/switch.scss\");\n/* harmony import */ var _switch_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_switch_scss__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ }),
 
@@ -141,6 +152,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./style.scss */ \"./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar id = \"!!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./style.scss\";\nvar update = api(id, content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/style.scss?");
+
+/***/ }),
+
+/***/ "./src/switch.scss":
+/*!*************************!*\
+  !*** ./src/switch.scss ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./switch.scss */ \"./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/switch.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar id = \"!!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./switch.scss\";\nvar update = api(id, content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/switch.scss?");
 
 /***/ })
 

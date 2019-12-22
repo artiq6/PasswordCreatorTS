@@ -1,12 +1,72 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro&display=swap');
 $Lato: 'Lato', sans-serif;   
 $SourceSansPro: 'Source Sans Pro', sans-serif;
+$primaryColor: #6B6AFF;
+$bacgroundColor:#89BBF3;
+$cardColor:#091F40;
+$cardDarkColor:#22354E;
 
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin radius(){
+  border-radius:20px;
+}
+
+html,body{
+  height: 100%;
+}
 body {
     font-family: $Lato;
-    font-weight: normal;
+    color:white;
+    background-color: $bacgroundColor;
+    
+    margin:0;
+    padding:0;
+   justify-content: center;
+    align-items: center;
+    display: flex;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $SourceSansPro;
-    font-weight: normal;
+  .line{
+    width:90%;
+    border:none;
+    border-top:2px solid $cardDarkColor;
+   
   }
+  .wrapper{
+    height: 60vh;
+    width:60%;
+    min-width:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $cardColor;
+    color:white;
+    @include radius();
+    @include box-shadow( 0,10px,40px,rgba(0, 0, 0, 0.50));
+  }
+  #password{
+    background-color:$cardDarkColor;
+    @include radius();
+    width:90%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  h3{
+    margin-bottom:0;
+  }
+  }
+
+ 
