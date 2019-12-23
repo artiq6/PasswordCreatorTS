@@ -42,11 +42,13 @@ body {
     width:90%;
     border:none;
     border-top:2px solid $cardDarkColor;
+    margin-bottom: 2em;
    
   }
   .wrapper{
     height: 60vh;
     width:60%;
+    min-height: 600px;
     min-width:300px;
     display: flex;
     flex-direction: column;
@@ -55,18 +57,63 @@ body {
     color:white;
     @include radius();
     @include box-shadow( 0,10px,40px,rgba(0, 0, 0, 0.50));
+    h1{
+      font-size: 4em;
+    }
   }
-  #password{
+  .passwordContainer{
     background-color:$cardDarkColor;
     @include radius();
     width:90%;
+    min-height: 100px;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
   h3{
     margin-bottom:0;
   }
   }
-
+  .options{
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    align-items: center;
+    justify-content: center;
+  }
+  .container{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width:60%;
+    justify-content: center;
+    p{
+      margin-right: 5px;
+    }
+  }
  
+ #rangeDigit{
+   min-width: 20px;
+   margin-left:1em;
+   color:white;
+ }
+ .buttonGenerate {
+  background-color: $cardDarkColor;
+  color: white;
+  border-radius: 20px;
+  border:none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  &:hover{
+    background-color: $primaryColor;
+  }
+}
+
+

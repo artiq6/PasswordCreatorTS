@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Password Creator</title>
-   
+
 </head>
+
 <body>
     <div class="wrapper">
         <h1>Password Creator</h1>
         <hr class="line">
-       <div id="password">
-            <h3>Your generated password:</h3>
-            <h2>#@$%RARDSF$#%^RGDFGDFWE%@#$EFSE%@#</h2>
-       </div>
-       <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
-        <p>Lorem ipsum</p>
-        <p>Lorem ipsum</p>
+        <div class="passwordContainer">
+            <h3 style="display: none;">Your generated password:</h3>
+            <h2 id="password"></h2>
+        </div>
+        <div class="options">
+            <div class="container">
+                <p>Capital letters</p>
+                <label class="switch">
+                    <input id="checkboxCapitalLetters" type="checkbox">
+                    <span class="switchSlider"></span>
+                </label>
+            </div>
+            <div class="container">
+                <p>Special characters</p>
+                <label class="switch">
+                    <input id="checkboxSpecialCharacters" type="checkbox">
+                    <span class="switchSlider"></span>
+                </label>
+            </div>
+            <div class="container">
+                <p>password length</p>
+                <input id="rangePassword" type="range" min="6" max="30" value="6" class="slider">
+                <p id="rangeDigit">6</p>
+            </div>
+            <div class="container"></div>
+            <button id="generate" class="buttonGenerate">Generate</button>
+        </div>
+        </div>
     </div>
     <script src="index.bundle.js"></script>
 </body>
+
 </html>
