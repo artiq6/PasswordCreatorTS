@@ -12,46 +12,61 @@ let button = <HTMLButtonElement>document.getElementById("generate");
 //
 
 // event change for slider
-slider.addEventListener("input",sliderChange)
-function sliderChange(){
-  rangeDigit.innerText=slider.value
+slider.addEventListener("input", sliderChange)
+function sliderChange() {
+    rangeDigit.innerText = slider.value
 }
 
 //final password array
-let passwordArray:string[] = arrayFromCharToLetter(97,122);
-let finalPassword:string[]=[];
+let passwordArray: string[] = []
+let finalPassword: string[] = [];
 
 //number to ASCII from -> to
-function arrayFromCharToLetter(from:number,to:number):string[]{
-    let finalArray:string[] = []
-    for(let i=from;i<=to;i++){
+function arrayFromCharToLetter(from: number, to: number): string[] {
+    let finalArray: string[] = []
+    for (let i = from; i <= to; i++) {
         finalArray.push(String.fromCharCode(i))
     }
     return finalArray;
 }
 
 
-//Checkboxes:
-
-button.addEventListener("click",generate)
-function generate(){
+//create password function
+button.addEventListener("click", generate);
+function generate() {
+    passwordArray = arrayFromCharToLetter(97, 122);
+    finalPassword = [];
     console.log(capitalLetters.checked)
-    if(capitalLetters.checked){
-        let capitalArray=arrayFromCharToLetter(65,90);
-        passwordArray=passwordArray.concat(capitalArray);
+    if (capitalLetters.checked) {
+        let capitalArray = arrayFromCharToLetter(65, 90);
+        passwordArray = passwordArray.concat(capitalArray);
     }
-    if(specialCharacters.checked){
-        let specialcharacters1=arrayFromCharToLetter(33,47);
-        let specialcharacters2=arrayFromCharToLetter(58,64);
-        passwordArray=passwordArray.concat(specialcharacters1,specialcharacters2);
+    if (specialCharacters.checked) {
+        let specialcharacters1 = arrayFromCharToLetter(33, 47);
+        let specialcharacters2 = arrayFromCharToLetter(58, 64);
+        passwordArray = passwordArray.concat(specialcharacters1, specialcharacters2);
     }
     getRandomValues(parseInt(slider.value))
+    let passwordOutput = document.getElementById("password");
+    passwordOutput.innerText = finalPassword.join("");
 }
-function getRandomValues(length:number){
-    for(let i = 0; i < length; i++){
-        var randNumber = Math.floor(Math.random()*passwordArray.length)
+function getRandomValues(length: number) {
+    for (let i = 0; i < length; i++) {
+        var randNumber = Math.floor(Math.random() * passwordArray.length)
         finalPassword.push(passwordArray[randNumber])
     }
-    console.log(finalPassword)
 }
+
+//copy password after clicking password
+document.getElementsByClassName("passwordContainer")[0].addEventListener("click",copyPassword);
+function copyPassword() {
+    var range = document.createRange();
+    range.selectNode(document.getElementById("password"));
+    window.getSelection().removeAllRanges(); // clear current selection
+    window.getSelection().addRange(range); // to select text
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();// to deselect
+
+}
+
 
